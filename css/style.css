@@ -53,6 +53,7 @@ nav ul li a::after {
   content: "";
   display: block;
   border-bottom: 2px solid #f56200;
+  border-radius: 25px;
   transform: scaleX(0);
 }
 nav ul li a:hover::after {
@@ -140,6 +141,7 @@ section {
   font-size: 20px;
   margin: 20px 0 40px;
   padding-top: 20px;
+  text-align: justify;
 }
 .home-text .btn-box a {
   position: relative;
@@ -150,7 +152,7 @@ section {
   height: 100%;
   background: transparent;
   border: 2px solid #f56200;
-  border-radius: 15px;
+  border-radius: 5px;
   font-size: 18px;
   font-weight: 600;
   color: #f56200;
@@ -173,6 +175,7 @@ section {
   font-size: 32px;
   margin-bottom: 4rem;
   text-align: center;
+  margin: 50px;
 }
 
 .about {
@@ -195,9 +198,9 @@ section {
 }
 
 .about-text h4 {
-  font-size: 24px;
-  margin-top: 5rem;
-  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  margin-top: 50px;
+  margin-bottom: 15px;
 }
 .about-text h4 span {
   color: #f56200;
@@ -205,41 +208,62 @@ section {
 .about-text p {
   font-size: 18px;
   line-height: 1.6;
+  text-align: justify;
 }
 
 /* --------ABOUT STOP---------- */
 
 /* ---------SKILL GO------------ */
 .skill-edu {
-  margin-top: 4rem;
+  margin-top: 120px;
   display: grid;
   grid-template-columns: 40% 60%;
   gap: 4rem;
+  cursor: pointer;
 }
 .educa span {
   color: #f56200;
 }
-.educa a {
-  font-size: 1.2rem;
-  font-weight: 600;
+.education {
+  font-size: 1rem;
+  margin: 50px auto;
+  border-left: 3px solid #f56200;
+  padding-left: 30px;
+  color: #f56200;
+  text-align: left;
 }
+.education h4 {
+  color: #1c1c1cc9;
+}
+.education h3 {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
 .skill-col {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.2rem;
+  gap: 1.5rem;
 }
 .col {
-  padding: 20px;
-  background: #e2e0e0;
-  border-radius: 20px;
+  padding: 10px;
+  background: #f0f0f0;
+  border-radius: 10px;
   transition: 0.2s;
+  text-align: justify;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+}
+.col img {
+  width: 100%;
+  border-radius: 10px;
 }
 .col:hover {
   box-shadow: 0 10px 15 rgba(0, 0, 0, 0.2);
-  transform: scale(1.03) translateY(-5px);
+  transform: scale(1.1) translateY(-5px);
 }
 .col h4 {
-  color: #f56200;
+  text-align: center;
+  margin-top: 5px;
   font-size: 18px;
 }
 .col p {
@@ -263,6 +287,7 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(300px, auto));
   align-items: center;
   gap: 2.5rem;
+  cursor: pointer;
 }
 
 .box {
@@ -271,22 +296,23 @@ section {
   background-color: #fff;
   color: #000;
   text-align: center;
-  padding: 50px 50px 60px;
+  padding: 20px 20px 20px;
   transition: 0.2s;
 }
 
 .box img {
-  width: 50%;
+  width: 100%;
+  border-radius: 10px;
 }
 
 .box h3 {
-  font-size: 20px;
+  font-size: 1.1rem;
   padding: 10px;
 }
 
 .box p {
-  margin-bottom: 25px;
-  text-align: start;
+  margin-bottom: 30px;
+  /* text-align: start; */
 }
 
 .btn {
@@ -294,18 +320,18 @@ section {
   background-color: #f56200;
   color: #fff;
   font-weight: 600;
-  border-radius: 25px;
-  padding: 6px 22px;
+  border-radius: 10px;
+  padding: 8px 22px;
 }
 
 .box .btn:hover {
-  background-color: #f00d0d;
+  background-color: #ff9500;
   transform: scale(1.03);
 }
 
 .box:hover {
   box-shadow: 0 10px 15 rgba(0, 0, 0, 0.2);
-  transform: scale(1.03) translateY(-5px);
+  transform: scale(1.1) translateY(-5px);
 }
 
 /* -----------PORT STOP---------- */
@@ -358,6 +384,7 @@ section {
 
 .contact-form form input {
   position: relative;
+  transition: 0.3s;
 }
 .contact-form form input,
 form textarea {
@@ -369,7 +396,7 @@ form textarea {
   background: #e2e0e0;
   color: black;
   font-size: 17px;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -406,8 +433,15 @@ form textarea {
   text-align: center;
 }
 .footer p {
-  font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.success-message {
+  display: none;
+  color: #4caf50;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 /* -----------CONTACT STOP---------- */
@@ -442,12 +476,12 @@ form textarea {
   }
 
   .contact h2 {
-    font-size: 28px;
+    font-size: 1.7rem;
     margin-bottom: 10px;
   }
 
   .contact h5 {
-    font-size: 18px;
+    font-size: 1rem;
     margin: 10px;
   }
   .contact p {
@@ -457,7 +491,7 @@ form textarea {
   .sosial-icon i {
     height: 36px;
     width: 36px;
-    font-size: 20px;
+    font-size: 1.5rem;
     margin-bottom: 10px;
     margin-right: 4px;
   }
@@ -495,30 +529,34 @@ form textarea {
     max-width: 100%;
   }
   .home-text h1 {
-    font-size: 34px;
+    font-size: 1.8rem;
     transition: 0.3s;
+  }
+  .educa h2 {
+    font-size: 1.7rem;
   }
   .educa a {
     font-size: 1.1rem;
   }
   .educa {
-    margin-bottom: 3rem;
+    margin-bottom: 30px;
   }
 
   .home-text h3 {
-    font-size: 20px;
+    font-size: 1.1rem;
   }
   .home-text p {
-    font-size: 16px;
+    font-size: 1rem;
   }
   .about p {
-    font-size: 16px;
+    font-size: 1rem;
+    text-align: justify;
   }
   .about h2 {
-    font-size: 28px;
+    font-size: 1.7rem;
     margin-bottom: 10px;
   }
   .about h4 {
-    font-size: 21px;
+    font-size: 1.2rem;
   }
 }
